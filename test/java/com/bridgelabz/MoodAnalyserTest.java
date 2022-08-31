@@ -5,19 +5,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class MoodAnalyserTest {
-    MoodAnalyser object;
-
+    MoodAnalyser object ;
     @BeforeEach
-    public void setUp() {
-        object = new MoodAnalyser();
+    public void setUp()
+    {
+        object = new MoodAnalyser("I am in Sad mood");
     }
-
     @Test
-    public void moodAnalyser() {
-
-        String ans = object.moodAnalyser("I am in Sad Mood");
-        Assertions.assertEquals("SAD", ans);
-        ;
+    public void moodAnalyser()
+    {
+        String ans = object.moodAnalyser();
+        Assertions.assertEquals("SAD",ans);
         System.out.println(ans);
     }
 }
